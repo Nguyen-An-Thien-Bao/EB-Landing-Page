@@ -1,4 +1,4 @@
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,51 +14,53 @@
     background-color: var(--bg-color--);
 }
 
-.logo-container{
+.logo-container {
     background-color: var(--black-color--);
     border-radius: 50%;
     width: 6em;
     height: 6em;
 }
 
-.logo-img{
+.logo-img {
     position: relative;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
 
-.nav-list{
+.nav-list {
     display: flex;
-    justify-content: space-evenly;
     font-size: 1.8rem;
-    /* width: auto; */
+    width: auto;
     text-transform: uppercase;
 }
 
-.nav--list--items{
-
+.nav--list--items {
+    user-select: none;
 }
 
-.nav--list--items--links{
+.nav--list--items--links {
     color: var(--black-color--);
     padding: 5px 20px;
     transition: background-color 1s;
 }
 
+.nav_active {
+    color: var(--white-color--);
+    background-color: var(--black-color--);
+    padding: 5px 20px;
+}
 
-.nav--list--items--links:hover{
+.nav--list--items--links:hover {
     background-color: var(--black-color--);
     color: var(--white-color--);
 }
 
-.menu-btn{
+.menu-btn {
     display: none;
 }
 
-
 @media screen and (max-width: 992px) {
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -66,23 +68,23 @@
         display: none;
     } */
 
-    .nav-container{
+    .nav-container {
         display: flex;
         justify-content: end;
         align-items: center;
     }
 
-    .menu-btn{
+    .menu-btn {
         display: inline-block;
         font-size: 3rem;
         cursor: pointer;
     }
 
-    .menu-btn:hover{
+    .menu-btn:hover {
         opacity: 0.8;
     }
 
-    .nav-list{
+    .nav-list {
         position: absolute;
         transform: translateY(100%);
         align-items: center;
@@ -91,12 +93,15 @@
         right: 0;
         top: 100%;
         z-index: 10;
-        background-color: aqua;
+        background-color: aquamarine;
         height: 100vh;
         transition: transfrom 1s ease;
+        text-align: center;
+    }
+    .nav--list--items {
+        margin: 20px 0;
     }
 }
 
 @media screen and (max-width: 576px) {
-    
 }
